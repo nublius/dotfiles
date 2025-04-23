@@ -37,8 +37,6 @@ assign [class="kitty"] 1
 assign [class="chrome"] 3
 assign [class="code"] 2
 assign [class="firefox"] 4
-assign [class="obsidian"] 4
-assign [class="zathura"] 2
 
 # Exec on startup
 exec kitty
