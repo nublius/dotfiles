@@ -51,6 +51,9 @@ bindsym $mod+o exec obsidian
 # Start discord with Win + D
 bindsym $mod+d exec discord
 
+# Keybinding for toggling touchpad
+bindsym $mod+Shift+t exec --no-startup-id ~/.local/bin/toggle-touchpad.sh
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
