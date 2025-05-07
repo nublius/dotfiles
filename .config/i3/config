@@ -23,6 +23,9 @@ font pango:monospace 14
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Start redshift to not kill eyes
+exec --no-startup-id redshift -l LATITUDE:LONGITUDE
+
 # Start xfsettings to apply themes
 exec --no-startup-id xfsettingsd
 exec --no-startup-id xfce4-power-manager
@@ -50,6 +53,10 @@ bindsym $mod+o exec obsidian
 
 # Start discord with Win + D
 bindsym $mod+d exec discord
+
+# Launch clipboard menu with Rofi
+exec --no-startup-id systemctl --user import-environment DISPLAY XAUTHORITY
+bindsym $mod+v exec --no-startup-id env CM_LAUNCHER=rofi clipmenu
 
 # Keybinding for toggling touchpad
 bindsym $mod+Shift+t exec --no-startup-id ~/.local/bin/toggle-touchpad.sh
